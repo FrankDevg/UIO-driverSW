@@ -19,4 +19,6 @@ import { ComponentsModule } from 'src/app/components/components.module';
   ],
   declarations: [SignupPage]
 })
-export class SignupPageModule {}
+export class SignupPageModule {
+  
+}
