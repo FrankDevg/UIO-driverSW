@@ -1,0 +1,8 @@
+{
+  "name": "uioDriver",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

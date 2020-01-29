@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="center">
+  <app-logo></app-logo>
+  <h1>Ingresar Gasolinera</h1>
+</div>
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label position = "stacked">Nombre  de la estación de gasolina</ion-label>
+        <ion-input [(ngModel)]="name" type='text' name="name" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position = "stacked">Precio por galon</ion-label>
+        <ion-input [(ngModel)]="name" type='text' name="name" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position = "stacked">Valor pagado</ion-label>
+        <ion-input [(ngModel)]="name" type='text' name="name" ></ion-input>
+      </ion-item>
+      
+      <ion-button expand= "block" shape = 'round' color='primary' (click)="login()">Guardar</ion-button>
+    </ion-list>
+    
+  </form>
+</ion-content>
