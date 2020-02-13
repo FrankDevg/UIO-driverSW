@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {Platform} from '@ionic/angular';
 import {Geolocation} from '@ionic-native/geolocation/ngx';
+import { UsuarioService } from 'src/app/services/usuario.service';
+import {UsuarioI} from 'src/app/models/usuario.interface';
+
 declare var google;
 @Component({
   selector: 'app-map',
@@ -8,13 +11,14 @@ declare var google;
   styleUrls: ['./map.page.scss'],
 })
 export class MapPage implements OnInit {
-  
+  usuario?;
   map:any;
   marker:any;
   latitude:any="";
   longitude:any="";
   timestamp:any="";
-  constructor(public platform: Platform, public geolocation:Geolocation) {
+  user:any="";
+  constructor(public platform: Platform, public geolocation:Geolocation, private usuarioService: UsuarioService) {
     this.platform.ready().then(()=>{
       var mapOptions={
           
@@ -49,8 +53,12 @@ export class MapPage implements OnInit {
       
     } )
   }
+  
 
   ngOnInit() {
+    this.user = this.usuarioService.obtenerUsuarioS().user;
+    this.usuario = this.usuarioService.obtenerUsuarioS();
+    console.log(this.usuario);
   }
   
 }

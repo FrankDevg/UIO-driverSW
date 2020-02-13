@@ -20,17 +20,17 @@
                 </ion-select>
               </ion-item>
             </ion-item>
-        <ion-item>
-          <ion-label position = "stacked">Marca</ion-label>
-          <ion-input type='text'></ion-input>
-        </ion-item>
+            <ion-item>
+              <ion-label position = "stacked">Marca</ion-label>
+              <ion-input type='text' [(ngModel)]="usuario.marca" name="marca"></ion-input>
+            </ion-item>
         <ion-item>
             <ion-label position = "stacked">Modelo</ion-label>
-            <ion-input type='text'></ion-input>
+            <ion-input type='text1'  [(ngModel)]="usuario.modelo" name="modelo"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position = "stacked">Número de placa</ion-label>
-          <ion-input type='text'></ion-input>
+          <ion-input type='text2'[(ngModel)]="usuario.numplaca" name="numplaca"></ion-input>
       </ion-item>
         
         <ion-button expand= "block" shape = 'round' color='primary' (click)="pantallaHome()">Guardar</ion-button>

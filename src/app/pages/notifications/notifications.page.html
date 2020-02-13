@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar color ='primary'>
-    <ion-title>notifications</ion-title>
+    <ion-title>Notificaciones</ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="center">
+    <h1>Dias Hoy no Circula</h1>
+    <img src='assets/images/hoyno.jpg' alt="UIO-Driver project logo">
+    
+  
+  </div>
+  <div class="left">
+    <ion-label position = "stacked">Placa Número:</ion-label>
+    <ion-item>
+      
+      <ion-input type='text' disabled="true" [(ngModel)]="usuario.numplaca"></ion-input>
+    </ion-item>
+    
+    <ion-label position = "stacked">Fecha:</ion-label>
+    <ion-input type='text1' disabled="true" [(ngModel)]="fechaS"></ion-input>
+    <ion-label position = "stacked">El día de hoy:</ion-label>
+    <ion-input type='text1' disabled="true" [(ngModel)]="circula"></ion-input>
+  </div>
 
 </ion-content>

@@ -12,6 +12,7 @@ import {UsuarioI} from '../models/usuario.interface';
 export class UsuarioService {
   private usuarioC: AngularFirestoreCollection<UsuarioI>;
   private usuarios: Observable<UsuarioI[]>;
+  private usuarioSeleccionado: UsuarioI;
 
 
   constructor(db: AngularFirestore) {
@@ -27,6 +28,13 @@ export class UsuarioService {
       }
     ));
    }
+   colocarUsuarioS(usuarioL){
+     this.usuarioSeleccionado = usuarioL;
+
+   }
+   obtenerUsuarioS(){
+     return this.usuarioSeleccionado;
+   }
    getUsuarios(){
      return this.usuarios;
    }
@@ -36,4 +44,5 @@ export class UsuarioService {
    addUsuario(usuario: UsuarioI){
     return this.usuarioC.add(usuario);
    }
+
 }

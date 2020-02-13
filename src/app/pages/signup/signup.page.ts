@@ -15,7 +15,11 @@ export class SignupPage implements OnInit {
   usuario: UsuarioI = {
     email: '',
     user: '',
-    pass: ''
+    pass: '',
+    marca:'',
+    modelo:'',
+    numplaca:'',
+    vehiculo:''
   }
   usuarioId = null; 
 
@@ -54,10 +58,10 @@ message: 'loading...'
      //update
    }else {
      // add new
-     this.usuarioService.addUsuario(this.usuario).then(() =>{
       loading.dismiss();
+      this.usuarioService.colocarUsuarioS(this.usuario);
       this.router.navigate(['/registrovehiculo']);
-     });
+    
    }
 
   }
